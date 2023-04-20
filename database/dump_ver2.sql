@@ -45,6 +45,14 @@ CREATE TABLE IF NOT EXISTS `loaihanghoa` (
   `TenLoaiHang` varchar(200) DEFAULT NULL,
   PRIMARY KEY (`MaLoaiHang`)
 ) ENGINE=InnoDB AUTO_INCREMENT=104 DEFAULT CHARSET=utf8mb3;
+
+INSERT INTO `loaihanghoa` (`MaLoaiHang`, `TenLoaiHang`) VALUES
+(1, 'Iphone'),
+(2, 'Ipad'),
+(3, 'Macbook'),
+(4, 'Apple Watch'),
+(5, 'Accessory');
+
 CREATE TABLE IF NOT EXISTS `hanghoa` (
   `MSHH` int NOT NULL AUTO_INCREMENT,
   `TenHH` varchar(100) DEFAULT NULL,
@@ -57,6 +65,16 @@ CREATE TABLE IF NOT EXISTS `hanghoa` (
   KEY `FK_hanghoa_loaihanghoa` (`MaLoaiHang`),
   CONSTRAINT `FK_hanghoa_loaihanghoa` FOREIGN KEY (`MaLoaiHang`) REFERENCES `loaihanghoa` (`MaLoaiHang`)
 ) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8mb3;
+
+INSERT INTO `hanghoa` (`MSHH`, `TenHH`, `MoTa`, `HinhMoTa`, `Gia`, `SoLuongHang`, `MaLoaiHang`) VALUES
+(26, 'IPHONE 13', 'The new technology, professional in photography, high performance for usability, beautiful screen for the user experience has never been better.', '1636473892-img1-iphone-13-1.png', '23999000', 100, 99),
+(27, 'IPHONE 13 PRO MAX', 'Brings professionalism in each functional component', '1636473870-img1-iphone-13-promax-1.png', '31999000', 100, 99),
+(28, 'IPAD PRO M1 2021', 'Destroy pc and laptop. The replacement sooner or later', '1636473839-img1-ipad-pro-1.png', '25999000', 50, 100),
+(29, 'IPAD MINI 6', 'A monster in a small body, bringing ipad to a new level, compact and convenient new design.', '1636473810-img1-ipad-mini-1.png', '13999000', 50, 100),
+(30, 'MACBOOK PRO 2021', 'New more optimized design, new chip with outstanding performance', '1636473788-img1-macbook-pro-1.png', '31999000', 30, 101),
+(31, 'APPLE WATCH SERI 7', 'Compact, convenient, monitor health anytime, anywhere.', '1636473760-img1-watch7-1.png', '8999000', 100, 102),
+(32, 'AIRPODS PRO', 'Experience the ultimate with active noise cancellation, high-quality sound, redefining wireless headphones.', '1636473728-img1-AirPods-Pro-1.png', '4999000', 100, 103);
+
 CREATE TABLE IF NOT EXISTS `giohang` (
   `MaGH` int NOT NULL AUTO_INCREMENT,
   `MSHH` int DEFAULT NULL,

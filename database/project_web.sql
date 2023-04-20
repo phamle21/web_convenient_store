@@ -125,6 +125,29 @@ CREATE TABLE `hinhhanghoa` (
   `MSHH` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
+INSERT INTO `hinhhanghoa` (`MaHinh`, `TenHinh`, `MSHH`) VALUES
+(42, '1636473892-img1-iphone-13-1.png', 26),
+(43, '1636473892-img2-iphone-13-2.png', 26),
+(44, '1636473892-img3-iphone-13-3.png', 26),
+(45, '1636473870-img1-iphone-13-promax-1.png', 27),
+(46, '1636473870-img2-iphone-13-promax-2.png', 27),
+(47, '1636473870-img3-iphone-13-promax-3.png', 27),
+(48, '1636473839-img1-ipad-pro-1.png', 28),
+(49, '1636473839-img2-ipad-pro-2.png', 28),
+(50, '1636473839-img3-ipad-pro-3.png', 28),
+(51, '1636473810-img1-ipad-mini-1.png', 29),
+(52, '1636473810-img2-ipad-mini-2.png', 29),
+(53, '1636473810-img3-ipad-mini-3.png', 29),
+(54, '1636473788-img1-macbook-pro-1.png', 30),
+(55, '1636473788-img2-macbook-pro-2.png', 30),
+(56, '1636473788-img3-macbook-pro-3.png', 30),
+(57, '1636473760-img1-watch7-1.png', 31),
+(58, '1636473760-img2-watch7-2.png', 31),
+(59, '1636473760-img3-watch7-3.png', 31),
+(60, '1636473728-img1-AirPods-Pro-1.png', 32),
+(61, '1636473728-img2-AirPods-Pro-2.png', 32),
+(62, '1636473728-img3-AirPods-Pro-3.png', 32);
+
 --
 -- Dumping data for table `hinhhanghoa`
 --
