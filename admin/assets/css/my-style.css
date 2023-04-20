@@ -1,0 +1,59 @@
+.btn_search{
+    position: absolute;
+    background-color: transparent;
+    border: 0;
+    border-radius: 50%;
+    margin-left: -30px;
+    margin-top: 7px;
+}
+#input_product{
+    display: inline-block;
+}
+.notify_success{
+    width: 100%;
+    padding: 10px;
+    background-color: blue;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.notify_success i, .notify_fail i{
+    float: right;
+    cursor: pointer;
+}
+.notify_fail{
+    width: 100%;
+    padding: 10px;
+    background-color: red;
+    border-radius: 10px;
+    margin-top: 5px;
+}
+.active_admin{
+    color: #ffffff !important;
+    background: rgba(110, 216, 219, 0.15) !important;
+    border-left-color: #ffffff !important;
+}
+.go_shop{
+    bottom: 0;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.go_shop a:hover{
+    color: cyan;
+}
+.action_icon a{
+    margin: 10px;
+}
+
+.show_form_duyet{
+    margin-top: 5px;
+    display: none;
+}
+#btn_duyetlan2{
+    display: inline-block;
+    border: 2px solid white;
+    background-color: #00000000;
+    border-radius: 2px;
+    color: white;
+}
