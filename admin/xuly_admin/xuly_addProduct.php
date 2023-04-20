@@ -16,7 +16,7 @@ if ($_FILES['img1']['name'] != NULL) { //Lưu ảnh 1/ảnh mô tả
     // Move hình ảnh vào thư mục img/product
     move_uploaded_file($tmp_name, $path . $name_img);
 
-    $hinhmota = $name_img;
+    $hinhmota = (string) $name_img;
 } else {
     alert("Bạn chưa chọn ảnh sản phẩm");
 }

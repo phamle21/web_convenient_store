@@ -99,7 +99,7 @@
             if($check_img3 == true){// Update
                 $con->query("UPDATE hinhhanghoa SET TenHinh='$name_img3' WHERE MaHinh='$mahinh3'");
             }else{//Create
-                $con->query("INSERT INTO hinhhanghoa(TenHinh, MSHH) VALUES ('$name_img3','$mshh')");
+                $con->query("CALL admin_add_image('$name_img3','$mshh')");
             }
         }
 
@@ -109,5 +109,3 @@
         setcookie('thongbao_fail','Chỉnh sửa sản phẩm thất bại', time() + 3, '/');
         header('Location: ../sanpham.php');
     }
-
-?>
