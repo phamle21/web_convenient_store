@@ -216,7 +216,7 @@ CREATE TABLE `nhanvien` (
 --
 
 INSERT INTO `nhanvien` (`MSNV`, `HoTenNV`, `ChucVu`, `DiaChi`, `SoDienThoai`, `MatKhau`) VALUES
-(1, 'Adminstrator', 'Admin', 'Cần Thơ', 'admin', 'd41d8cd98f00b204e9800998ecf8427e'),
+(1, 'Adminstrator', 'Admin', 'Cần Thơ', 'admin', '21232f297a57a5a743894a0e4a801fc3'),
 (10, 'Nhân Viên 1', 'Kiểm duyệt', 'Ai biết đâu à', '0941649825', 'e10adc3949ba59abbe56e057f20f883e'),
 (11, 'Nhân Viên 2', 'Kiểm duyệt', 'Cần Thơ', '0941649827', 'e10adc3949ba59abbe56e057f20f883e');
 
