@@ -3,7 +3,7 @@
      define('DB_SERVER','localhost');
      define('DB_USER','root');
      define('DB_PASS' ,'');
-     define('DB_NAME', 'web_mun');
+     define('DB_NAME', 'conveient_store');
      
      $con = mysqli_connect(DB_SERVER,DB_USER,DB_PASS,DB_NAME);
      $con->set_charset("utf8");
