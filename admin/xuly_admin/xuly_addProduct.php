@@ -40,22 +40,25 @@ if ($_FILES['img3']['name'] != NULL) { //Lưu ảnh 3 nếu có
 }
 
 
+$sql = "call admin_add_product('$ten_sp', '$mota','$gia_sp', $soluong, '$hinhmota', $loaihh)";
 
+$result_query_add_product = $con->query($sql);
 
-$sql = "call admin_add_products($ten_sp, $mota, $gia_sp, $soluong, $hinhmota, $loaihh)";
-if ($con->query($sql) === TRUE) {
-    $last_mshh = $con->insert_id;
-    $sql_hinhanhsp = "INSERT INTO hinhhanghoa(TenHinh, MSHH)
-                          VALUES ('$hinhmota', '$last_mshh')";
-    $con->query($sql_hinhanhsp);
+if ($result_query_add_product) {
+
+    $last_mshh = (int) $result_query_add_product->fetch_assoc()['LAST_INSERT_ID()'];
+    $con->next_result();
+
+    $con->query("call admin_add_image('$hinhmota', $last_mshh)");
+    $con->next_result();
 
     if ($_FILES['img2']['name'] != NULL) {
-        $con->query("INSERT INTO hinhhanghoa(TenHinh, MSHH)
-                        VALUES ('$name_img2', '$last_mshh')");
+        $con->query("call admin_add_image('$name_img2', $last_mshh)");
+        $con->next_result();
     }
     if ($_FILES['img3']['name'] != NULL) {
-        $con->query("INSERT INTO hinhhanghoa(TenHinh, MSHH)
-                        VALUES ('$name_img3', '$last_mshh')");
+        $con->query("call admin_add_image('$name_img3', $last_mshh)");
+        $con->next_result();
     }
 
     setcookie('thongbao_success', 'Thêm sản phẩm thành công', time() + 3, '/');

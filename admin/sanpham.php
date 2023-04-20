@@ -145,8 +145,8 @@
             <div>
                 <label class="img_product" for="">Product Images:</label>
                 <i>Ảnh mô tả: </i><input type="file" name="img1" accept='image/*' required><br>
-                <i>Ảnh phụ 1: </i><input type="file" name="img2" accept='image/*' required><br>
-                <i>Ảnh phụ 2: </i><input type="file" name="img3" accept='image/*' required>
+                <i>Ảnh phụ 1: </i><input type="file" name="img2" accept='image/*' ><br>
+                <i>Ảnh phụ 2: </i><input type="file" name="img3" accept='image/*' >
             </div>
         </form>
       </div>
