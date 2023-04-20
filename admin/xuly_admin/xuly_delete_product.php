@@ -11,6 +11,7 @@ while ($row = $result_img->fetch_assoc()) {
 
 // Procudure admin_delete_product
 $result_del_hh = $con->query("call admin_delete_product($mshh)");
+$con->next_result();
 
 if ($result_del_hh === TRUE) {
     setcookie('thongbao_success', 'Xóa sản phẩm thành công', time() + 5, '/');
