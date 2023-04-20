@@ -16,7 +16,7 @@ if ($_FILES['img1']['name'] != NULL) { //Lưu ảnh 1/ảnh mô tả
     // Move hình ảnh vào thư mục img/product
     move_uploaded_file($tmp_name, $path . $name_img);
 
-    $hinhmota = $name_img;
+    $hinhmota = (string) $name_img;
 } else {
     alert("Bạn chưa chọn ảnh sản phẩm");
 }
@@ -42,20 +42,18 @@ if ($_FILES['img3']['name'] != NULL) { //Lưu ảnh 3 nếu có
 
 
 
-$sql = "call admin_add_products($ten_sp, $mota, $gia_sp, $soluong, $hinhmota, $loaihh)";
+$sql = "call admin_add_products('$ten_sp', '$mota', '$gia_sp', $soluong, '$hinhmota', $loaihh)";
+
 if ($con->query($sql) === TRUE) {
     $last_mshh = $con->insert_id;
-    $sql_hinhanhsp = "INSERT INTO hinhhanghoa(TenHinh, MSHH)
-                          VALUES ('$hinhmota', '$last_mshh')";
+    $sql_hinhanhsp = "call admin_add_image('$hinhmota', $last_mshh)";
     $con->query($sql_hinhanhsp);
 
     if ($_FILES['img2']['name'] != NULL) {
-        $con->query("INSERT INTO hinhhanghoa(TenHinh, MSHH)
-                        VALUES ('$name_img2', '$last_mshh')");
+        $con->query("call admin_add_image('$name_img2', $last_mshh)");
     }
     if ($_FILES['img3']['name'] != NULL) {
-        $con->query("INSERT INTO hinhhanghoa(TenHinh, MSHH)
-                        VALUES ('$name_img3', '$last_mshh')");
+        $con->query("call admin_add_image('$name_img3', $last_mshh)");
     }
 
     setcookie('thongbao_success', 'Thêm sản phẩm thành công', time() + 3, '/');
