@@ -25,9 +25,6 @@ if ($_FILES['img1']['name'] != NULL) { //Lưu ảnh 1/ảnh mô tả
     move_uploaded_file($tmp_name, $path . $name_img);
 
     $hinhmota = $name_img;
-    $hinhmota = $name_img;
-
-    $hinhmota = $name_img;
 }
 
 if ($_FILES['img2']['name'] != NULL) { //Lưu ảnh 2 nếu có

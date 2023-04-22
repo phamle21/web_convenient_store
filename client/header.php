@@ -70,10 +70,10 @@
 							<li class="menu-header">
 								<a href="payment.php">Payment</a>
 							</li>
-
+<!-- 
 							<li class="menu-header">
 								<a href="about.php">About</a>
-							</li>
+							</li> -->
 						</ul>
 					</div>	
 

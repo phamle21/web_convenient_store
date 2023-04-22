@@ -277,6 +277,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
   height: 84px;
   top: 40px;
   left: 0px; 
+  backdrop-filter: blur(20px);
 
   -webkit-transition: height 0.3s, background-color 0.3s;
   -o-transition: height 0.3s, background-color 0.3s;

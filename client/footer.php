@@ -3,7 +3,7 @@
 	<footer class="bg3 p-t-75 p-b-32">
 		<div class="p-t-40">
 			<p class="stext-107 cl6 txt-center">
-				Design by <a href="https://www.facebook.com/htvinh.17" target="_blank">Cris</a>
+				Design by <a href="https://www.facebook.com/phamle21" target="_blank">Cris</a>
 			</p>
 		</div>
 		<div>
